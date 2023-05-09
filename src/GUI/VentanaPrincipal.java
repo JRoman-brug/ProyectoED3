@@ -49,13 +49,14 @@ public class VentanaPrincipal {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		Main logica = new Main();
+		//Configuro el frame
 		frmSiuGuaran = new JFrame();
 		frmSiuGuaran.setTitle("SIU Guaraní");
 		frmSiuGuaran.setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaPrincipal.class.getResource("/Recs/logo-uns2.png")));
 		frmSiuGuaran.setResizable(false);
 		frmSiuGuaran.setBounds(100, 100, 1000, 700);
-		IngresarMateria ingresarMateria = new IngresarMateria(frmSiuGuaran,logica);
+		//Inicio el JPanel 
+		IngresarMateria ingresarMateria = new IngresarMateria(frmSiuGuaran);
 		frmSiuGuaran.getContentPane().add(ingresarMateria);
 		ingresarMateria.setLayout(new BoxLayout(ingresarMateria, BoxLayout.Y_AXIS));
 		frmSiuGuaran.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
